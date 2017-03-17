@@ -44,13 +44,20 @@ sudo apt-get update
 sudo apt-get install logstash
 
 
-
 #install php 7
 # remove php5 modules
 sudo apt-get autoremove --purge php5-*
 # add php-7.0 source list by [Ondřej Surý](https://github.com/oerdnj)
-sudo add-apt-repository ppa:ondrej/php
+sudo add-apt-repository -y ppa:ondrej/php
 # Update index
+
 sudo apt-get update
 # Install php7.0-fpm with needed extensions
-sudo apt-get install php7.0-fpm php7.0-cli php7.0-common php7.0-json php7.0-opcache php7.0-mysql php7.0-phpdbg php7.0-mbstring php7.0-gd php7.0-imap php7.0-ldap php7.0-pgsql php7.0-pspell php7.0-recode php7.0-snmp php7.0-tidy php7.0-dev php7.0-intl php7.0-gd php7.0-curl php7.0-zip php7.0-xml
+sudo apt-get -y install php7.0-fpm php7.0-cli php7.0-common php7.0-json php7.0-opcache php7.0-mysql php7.0-phpdbg php7.0-mbstring php7.0-gd php7.0-imap php7.0-ldap php7.0-pgsql php7.0-pspell php7.0-recode php7.0-snmp php7.0-tidy php7.0-dev php7.0-intl php7.0-gd php7.0-curl php7.0-zip php7.0-xml
+
+# install composer
+sudo apt-get -y install composer
+
+sudo apt-get -y install php-pear
+
+
